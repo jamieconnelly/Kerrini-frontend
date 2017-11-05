@@ -1,0 +1,14 @@
+version: '2'
+
+services:
+  app:
+    build: ./app
+    volumes:
+      - ./app/public:/usr/local/nginx/html
+
+  nginx:
+    build: ./nginx
+    volumes_from:
+      - app
+    ports:
+      - "80:80"
