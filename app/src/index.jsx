@@ -5,8 +5,8 @@ import thunkMiddleware from 'redux-thunk'
 import createHistory from 'history/createBrowserHistory'
 import { routerMiddleware } from 'react-router-redux'
 
-import { rootReducer } from './reducers/root.reducer'
-import { AppRouter } from './routes'
+import { rootReducer } from 'reducers/root.reducer'
+import { AppRouter } from 'routes'
 
 const root = document.getElementById('app')
 const history = createHistory()
