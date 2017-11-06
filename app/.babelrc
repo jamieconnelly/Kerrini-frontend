@@ -1,0 +1,30 @@
+{
+  "presets": [
+    "es2017",
+    "es2016",
+    "es2015",
+    "react",
+  ],
+  "plugins":
+  [
+    "transform-object-rest-spread",
+    "dynamic-import-webpack",
+    ["transform-regenerator", {
+      "polyfill": false,
+      "regenerator": true
+    }]
+  ],
+  "env": {
+    "test": {
+      "plugins": [
+        ["react-css-modules", {
+          "filetypes": {
+            ".scss": "postcss-scss"
+          },
+          "exclude": "\\.verbatim\\.s?css$"
+        }],
+        "istanbul",
+      ]
+    }
+  }
+}
