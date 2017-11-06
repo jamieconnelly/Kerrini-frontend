@@ -9,16 +9,41 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
 })
 
 module.exports = {
-  entry: './index.jsx',
+  entry: path.resolve(__dirname, 'src/index.jsx'),
   output: {
     path: path.resolve('dist'),
     filename: 'bundle.js',
+    publicPath: '/',
   },
   module: {
-    loaders: [
-      { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
-      { test: /\.jsx$/, loader: 'babel-loader', exclude: /node_modules/ },
-    ],
+    loaders: [{
+      test: /\.jsx?$/,
+      exclude: [/node_modules/],
+      use: [{
+        loader: 'babel-loader',
+        options: {
+          babelrc: false,
+          presets: [['es2015', { modules: false }], 'react'],
+          plugins: [
+            'transform-object-rest-spread',
+            'syntax-dynamic-import',
+            'dynamic-import-webpack',
+            'syntax-trailing-function-commas',
+            'transform-async-to-generator',
+          ],
+        },
+      }],
+    }],
   },
   plugins: [HtmlWebpackPluginConfig],
+  devServer: {
+    historyApiFallback: true,
+  },
+  resolve: {
+    extensions: ['.js', '.jsx'],
+    modules: [
+      path.resolve(__dirname, 'src'),
+      path.resolve(__dirname, 'node_modules'),
+    ],
+  },
 }
