@@ -2,11 +2,14 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { createStore, applyMiddleware, compose } from 'redux'
 import thunkMiddleware from 'redux-thunk'
-import { Provider } from 'react-redux'
+import createHistory from 'history/createBrowserHistory'
+import { routerMiddleware } from 'react-router-redux'
 
 import { rootReducer } from './reducers/root.reducer'
+import { AppRouter } from './routes'
 
 const root = document.getElementById('app')
+const history = createHistory()
 
 const configureStore = () => {
   const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
@@ -14,6 +17,7 @@ const configureStore = () => {
     rootReducer,
     composeEnhancers(applyMiddleware(
       thunkMiddleware,
+      routerMiddleware(history),
       )
     )
   )
@@ -22,13 +26,7 @@ const configureStore = () => {
 
 const store = configureStore()
 
-const Home = () => (
-  <div>Hello</div>
-)
-
 ReactDOM.render(
-  <Provider store={store}>
-    <Home />
-  </Provider>,
+  <AppRouter store={store} history={history} />,
   root,
 )

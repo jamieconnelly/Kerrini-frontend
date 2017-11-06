@@ -1,4 +1,5 @@
-import { createReducer } from '../utils/reducer'
+import { createReducer } from 'utils/reducer'
+
 import initialState from './initialState'
 
 const { session: initialSessionState } = initialState
