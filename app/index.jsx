@@ -1,6 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { AppContainer } from 'react-hot-loader'
 import { createStore, applyMiddleware, compose } from 'redux'
 import thunkMiddleware from 'redux-thunk'
 import { Provider } from 'react-redux'
@@ -15,12 +14,13 @@ const configureStore = () => {
     rootReducer,
     composeEnhancers(applyMiddleware(
       thunkMiddleware,
-    ))
+      )
+    )
   )
   return store
 }
 
-  const store = configureStore()
+const store = configureStore()
 
 const Home = () => (
   <div>Hello</div>
