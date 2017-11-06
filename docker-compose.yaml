@@ -4,7 +4,7 @@ services:
   app:
     build: ./app
     volumes:
-      - ./app/public:/usr/local/nginx/html
+      - ./app/dist:/usr/local/nginx/html
 
   nginx:
     build: ./nginx
