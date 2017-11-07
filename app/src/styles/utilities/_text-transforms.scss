@@ -1,0 +1,18 @@
+.ttu { text-transform: uppercase;  }
+.ttl { text-transform: lowercase;  }
+.ttc { text-transform: capitalize; }
+.ttn { text-transform: none;       }
+
+@include sm-and-up {
+  .ttu-sm { text-transform: uppercase;  }
+  .ttl-sm { text-transform: lowercase;  }
+  .ttc-sm { text-transform: capitalize; }
+  .ttn-sm { text-transform: none;       }
+}
+
+@include md-and-up {
+  .ttu-md { text-transform: uppercase;  }
+  .ttl-md { text-transform: lowercase;  }
+  .ttc-md { text-transform: capitalize; }
+  .ttn-md { text-transform: none;       }
+}

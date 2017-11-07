@@ -8,6 +8,8 @@ import { routerMiddleware } from 'react-router-redux'
 import { rootReducer } from 'reducers/root.reducer'
 import { AppRouter } from 'routes'
 
+import './styles/styles.scss'
+
 const root = document.getElementById('app')
 const history = createHistory()
 

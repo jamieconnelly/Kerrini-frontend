@@ -1,0 +1,39 @@
+// Breakpoint mixins
+@mixin sm-and-up {
+    @media (min-width: $sm) { @content;
+  }
+}
+
+@mixin md-and-up {
+    @media (min-width: $md) { @content;
+  }
+}
+
+@mixin lg-and-up {
+    @media (min-width: $lg) { @content;
+  }
+}
+
+@mixin status-state($color) {
+  box-shadow: $bs-strong-blue, inset 4px 0 0 0 $color;
+
+  &:hover {
+    box-shadow: $bs-heavy-blue, inset 4px 0 0 0 $color;
+  }
+}
+
+// Mixins for creating borders, but with box-shadow
+@mixin box-shadow-border($color) {
+  box-shadow: inset 1px 0 0 0  $color,
+              inset -1px 0 0 0 $color,
+              inset 0 -1px 0 0 $color,
+              inset 0 1px 0 0  $color;
+}
+
+@mixin card-border($border-color) {
+  box-shadow: inset 1px 0 0 0  $border-color,
+              inset -1px 0 0 0 $border-color,
+              inset 0 -1px 0 0 $border-color,
+              inset 0 1px 0 0  $border-color,
+              $bs-weak
+}

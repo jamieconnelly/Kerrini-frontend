@@ -1,0 +1,205 @@
+$spacing-0: 0;
+$spacing-1: $s4;
+$spacing-2: $s8;
+$spacing-3: $s12;
+$spacing-4: $s16;
+$spacing-5: $s24;
+$spacing-6: $s32;
+$spacing-7: $s40;
+$spacing-8: $s48;
+$spacing-9: $s56;
+$spacing-10: $s64;
+
+
+$spacings: (
+  $spacing-0 !important,
+  $spacing-1 !important,
+  $spacing-2 !important,
+  $spacing-3 !important,
+  $spacing-4 !important,
+  $spacing-5 !important,
+  $spacing-6 !important,
+  $spacing-7 !important,
+  $spacing-8 !important,
+  $spacing-9 !important,
+  $spacing-10 !important,
+);
+
+@for $i from 0 through 10 {
+  .pl#{$i} { padding-left: nth($spacings, $i+1); }
+  .pr#{$i} { padding-right: nth($spacings, $i+1); }
+  .pb#{$i} { padding-bottom: nth($spacings, $i+1); }
+  .pt#{$i} { padding-top: nth($spacings, $i+1); }
+  .ph#{$i} { padding-left: nth($spacings, $i+1); padding-right: nth($spacings, $i+1); }
+  .pv#{$i} { padding-bottom: nth($spacings, $i+1); padding-top: nth($spacings, $i+1); }
+  .pa#{$i} { padding: nth($spacings, $i+1); }
+
+  .ml#{$i} { margin-left: nth($spacings, $i+1); }
+  .mr#{$i} { margin-right: nth($spacings, $i+1); }
+  .mb#{$i} { margin-bottom: nth($spacings, $i+1); }
+  .mt#{$i} { margin-top: nth($spacings, $i+1); }
+  .mh#{$i} { margin-left: nth($spacings, $i+1); margin-right: nth($spacings, $i+1); }
+  .mv#{$i} { margin-bottom: nth($spacings, $i+1); margin-top: nth($spacings, $i+1); }
+  .ma#{$i} { margin: nth($spacings, $i+1); }
+}
+
+@include sm-and-up {
+  @for $i from 0 through 10 {
+    .pl#{$i}-sm { padding-left: nth($spacings, $i+1); }
+    .pr#{$i}-sm { padding-right: nth($spacings, $i+1); }
+    .pb#{$i}-sm { padding-bottom: nth($spacings, $i+1); }
+    .pt#{$i}-sm { padding-top: nth($spacings, $i+1); }
+    .ph#{$i}-sm { padding-left: nth($spacings, $i+1); padding-right: nth($spacings, $i+1); }
+    .pv#{$i}-sm { padding-bottom: nth($spacings, $i+1); padding-top: nth($spacings, $i+1); }
+    .pa#{$i}-sm { padding: nth($spacings, $i+1); }
+
+    .ml#{$i}-sm { margin-left: nth($spacings, $i+1); }
+    .mr#{$i}-sm { margin-right: nth($spacings, $i+1); }
+    .mb#{$i}-sm { margin-bottom: nth($spacings, $i+1); }
+    .mt#{$i}-sm { margin-top: nth($spacings, $i+1); }
+    .mh#{$i}-sm { margin-left: nth($spacings, $i+1); margin-right: nth($spacings, $i+1); }
+    .mv#{$i}-sm { margin-bottom: nth($spacings, $i+1); margin-top: nth($spacings, $i+1); }
+    .ma#{$i}-sm { margin: nth($spacings, $i+1); }
+  }
+}
+
+@include md-and-up {
+  @for $i from 0 through 10 {
+    .pl#{$i}-md { padding-left: nth($spacings, $i+1); }
+    .pr#{$i}-md { padding-right: nth($spacings, $i+1); }
+    .pb#{$i}-md { padding-bottom: nth($spacings, $i+1); }
+    .pt#{$i}-md { padding-top: nth($spacings, $i+1); }
+    .ph#{$i}-md { padding-left: nth($spacings, $i+1); padding-right: nth($spacings, $i+1); }
+    .pv#{$i}-md { padding-bottom: nth($spacings, $i+1); padding-top: nth($spacings, $i+1); }
+    .pa#{$i}-md { padding: nth($spacings, $i+1); }
+
+    .ml#{$i}-md { margin-left: nth($spacings, $i+1); }
+    .mr#{$i}-md { margin-right: nth($spacings, $i+1); }
+    .mb#{$i}-md { margin-bottom: nth($spacings, $i+1); }
+    .mt#{$i}-md { margin-top: nth($spacings, $i+1); }
+    .mh#{$i}-md { margin-left: nth($spacings, $i+1); margin-right: nth($spacings, $i+1); }
+    .mv#{$i}-md { margin-bottom: nth($spacings, $i+1); margin-top: nth($spacings, $i+1); }
+    .ma#{$i}-md { margin: nth($spacings, $i+1); }
+  }
+}
+
+@include lg-and-up {
+  @for $i from 0 through 10 {
+    .pl#{$i}-lg { padding-left: nth($spacings, $i+1); }
+    .pr#{$i}-lg { padding-right: nth($spacings, $i+1); }
+    .pb#{$i}-lg { padding-bottom: nth($spacings, $i+1); }
+    .pt#{$i}-lg { padding-top: nth($spacings, $i+1); }
+    .ph#{$i}-lg { padding-left: nth($spacings, $i+1); padding-right: nth($spacings, $i+1); }
+    .pv#{$i}-lg { padding-bottom: nth($spacings, $i+1); padding-top: nth($spacings, $i+1); }
+    .pa#{$i}-lg { padding: nth($spacings, $i+1); }
+
+    .ml#{$i}-lg { margin-left: nth($spacings, $i+1); }
+    .mr#{$i}-lg { margin-right: nth($spacings, $i+1); }
+    .mb#{$i}-lg { margin-bottom: nth($spacings, $i+1); }
+    .mt#{$i}-lg { margin-top: nth($spacings, $i+1); }
+    .mh#{$i}-lg { margin-left: nth($spacings, $i+1); margin-right: nth($spacings, $i+1); }
+    .mv#{$i}-lg { margin-bottom: nth($spacings, $i+1); margin-top: nth($spacings, $i+1); }
+    .ma#{$i}-lg { margin: nth($spacings, $i+1); }
+  }
+}
+
+// Negative spacings
+$negative-spacings: (
+  -$spacing-0 !important,
+  -$spacing-1 !important,
+  -$spacing-2 !important,
+  -$spacing-3 !important,
+  -$spacing-4 !important,
+  -$spacing-5 !important,
+  -$spacing-6 !important,
+  -$spacing-7 !important,
+  -$spacing-8 !important,
+  -$spacing-9 !important,
+  -$spacing-10 !important,
+);
+
+@for $i from 0 through 10 {
+  .npl#{$i} { padding-left: nth($negative-spacings, $i+1); }
+  .npr#{$i} { padding-right: nth($negative-spacings, $i+1); }
+  .npb#{$i} { padding-bottom: nth($negative-spacings, $i+1); }
+  .npt#{$i} { padding-top: nth($negative-spacings, $i+1); }
+  .nph#{$i} { padding-left: nth($negative-spacings, $i+1); padding-right: nth($negative-spacings, $i+1); }
+  .npv#{$i} { padding-bottom: nth($negative-spacings, $i+1); padding-top: nth($negative-spacings, $i+1); }
+  .npa#{$i} { padding: nth($negative-spacings, $i+1); }
+
+  .nml#{$i} { margin-left: nth($negative-spacings, $i+1); }
+  .nmr#{$i} { margin-right: nth($negative-spacings, $i+1); }
+  .nmb#{$i} { margin-bottom: nth($negative-spacings, $i+1); }
+  .nmt#{$i} { margin-top: nth($negative-spacings, $i+1); }
+  .nmh#{$i} { margin-left: nth($negative-spacings, $i+1); margin-right: nth($negative-spacings, $i+1); }
+  .nmv#{$i} { margin-bottom: nth($negative-spacings, $i+1); margin-top: nth($negative-spacings, $i+1); }
+  .nma#{$i} { margin: nth($negative-spacings, $i+1); }
+}
+
+@include sm-and-up {
+  @for $i from 0 through 10 {
+    .npl#{$i}-sm { padding-left: nth($negative-spacings, $i+1); }
+    .npr#{$i}-sm { padding-right: nth($negative-spacings, $i+1); }
+    .npb#{$i}-sm { padding-bottom: nth($negative-spacings, $i+1); }
+    .npt#{$i}-sm { padding-top: nth($negative-spacings, $i+1); }
+    .nph#{$i}-sm { padding-left: nth($negative-spacings, $i+1); padding-right: nth($negative-spacings, $i+1); }
+    .npv#{$i}-sm { padding-bottom: nth($negative-spacings, $i+1); padding-top: nth($negative-spacings, $i+1); }
+    .npa#{$i}-sm { padding: nth($negative-spacings, $i+1); }
+
+    .nml#{$i}-sm { margin-left: nth($negative-spacings, $i+1); }
+    .nmr#{$i}-sm { margin-right: nth($negative-spacings, $i+1); }
+    .nmb#{$i}-sm { margin-bottom: nth($negative-spacings, $i+1); }
+    .nmt#{$i}-sm { margin-top: nth($negative-spacings, $i+1); }
+    .nmh#{$i}-sm { margin-left: nth($negative-spacings, $i+1); margin-right: nth($negative-spacings, $i+1); }
+    .nmv#{$i}-sm { margin-bottom: nth($negative-spacings, $i+1); margin-top: nth($negative-spacings, $i+1); }
+    .nma#{$i}-sm { margin: nth($negative-spacings, $i+1); }
+  }
+}
+
+@include md-and-up {
+  @for $i from 0 through 10 {
+    .npl#{$i}-md { padding-left: nth($negative-spacings, $i+1); }
+    .npr#{$i}-md { padding-right: nth($negative-spacings, $i+1); }
+    .npb#{$i}-md { padding-bottom: nth($negative-spacings, $i+1); }
+    .npt#{$i}-md { padding-top: nth($negative-spacings, $i+1); }
+    .nph#{$i}-md { padding-left: nth($negative-spacings, $i+1); padding-right: nth($negative-spacings, $i+1); }
+    .npv#{$i}-md { padding-bottom: nth($negative-spacings, $i+1); padding-top: nth($negative-spacings, $i+1); }
+    .npa#{$i}-md { padding: nth($negative-spacings, $i+1); }
+
+    .nml#{$i}-md { margin-left: nth($negative-spacings, $i+1); }
+    .nmr#{$i}-md { margin-right: nth($negative-spacings, $i+1); }
+    .nmb#{$i}-md { margin-bottom: nth($negative-spacings, $i+1); }
+    .nmt#{$i}-md { margin-top: nth($negative-spacings, $i+1); }
+    .nmh#{$i}-md { margin-left: nth($negative-spacings, $i+1); margin-right: nth($negative-spacings, $i+1); }
+    .nmv#{$i}-md { margin-bottom: nth($negative-spacings, $i+1); margin-top: nth($negative-spacings, $i+1); }
+    .nma#{$i}-md { margin: nth($negative-spacings, $i+1); }
+  }
+}
+
+@include lg-and-up {
+  @for $i from 0 through 10 {
+    .npl#{$i}-lg { padding-left: nth($negative-spacings, $i+1); }
+    .npr#{$i}-lg { padding-right: nth($negative-spacings, $i+1); }
+    .npb#{$i}-lg { padding-bottom: nth($negative-spacings, $i+1); }
+    .npt#{$i}-lg { padding-top: nth($negative-spacings, $i+1); }
+    .nph#{$i}-lg { padding-left: nth($negative-spacings, $i+1); padding-right: nth($negative-spacings, $i+1); }
+    .npv#{$i}-lg { padding-bottom: nth($negative-spacings, $i+1); padding-top: nth($negative-spacings, $i+1); }
+    .npa#{$i}-lg { padding: nth($negative-spacings, $i+1); }
+
+    .nml#{$i}-lg { margin-left: nth($negative-spacings, $i+1); }
+    .nmr#{$i}-lg { margin-right: nth($negative-spacings, $i+1); }
+    .nmb#{$i}-lg { margin-bottom: nth($negative-spacings, $i+1); }
+    .nmt#{$i}-lg { margin-top: nth($negative-spacings, $i+1); }
+    .nmh#{$i}-lg { margin-left: nth($negative-spacings, $i+1); margin-right: nth($negative-spacings, $i+1); }
+    .nmv#{$i}-lg { margin-bottom: nth($negative-spacings, $i+1); margin-top: nth($negative-spacings, $i+1); }
+    .nma#{$i}-lg { margin: nth($negative-spacings, $i+1); }
+  }
+}
+
+// Center align
+.mc { margin: 0 auto }
+
+// 0 margin Last child classes
+.mblc0:last-of-type {
+  margin-bottom: 0 !important;
+}

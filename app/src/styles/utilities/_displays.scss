@@ -1,0 +1,83 @@
+.dn              { display: none !important;               }
+.di              { display: inline !important;             }
+.db              { display: block !important;              }
+.dib             { display: inline-block !important;       }
+.dit             { display: inline-table !important;       }
+.df              { display: flex !important;               }
+.dt              { display: table !important;              }
+.dtc             { display: table-cell !important;         }
+.dt-row          { display: table-row !important;          }
+.dt-row-group    { display: table-row-group !important;    }
+.dt-column       { display: table-column !important;       }
+.dt-column-group { display: table-column-group !important; }
+
+@include sm-and-up {
+  .dn-sm              { display: none !important;               }
+  .di-sm              { display: inline !important;             }
+  .db-sm              { display: block !important;              }
+  .dib-sm             { display: inline-block !important;       }
+  .dit-sm             { display: inline-table !important;       }
+  .df-sm              { display: flex !important;               }
+  .dt-sm              { display: table !important;              }
+  .dtc-sm             { display: table-cell !important;         }
+  .dt-row-sm          { display: table-row !important;          }
+  .dt-row-group-sm    { display: table-row-group !important;    }
+  .dt-column-sm       { display: table-column !important;       }
+  .dt-column-group-sm { display: table-column-group !important; }
+}
+
+@include md-and-up {
+  .dn-md              { display: none !important;               }
+  .di-md              { display: inline !important;             }
+  .db-md              { display: block !important;              }
+  .dib-md             { display: inline-block !important;       }
+  .dit-md             { display: inline-table !important;       }
+  .df-md              { display: flex !important;               }
+  .dt-md              { display: table !important;              }
+  .dtc-md             { display: table-cell !important;         }
+  .dt-row-md          { display: table-row !important;          }
+  .dt-row-group-md    { display: table-row-group !important;    }
+  .dt-column-md       { display: table-column !important;       }
+  .dt-column-group-md { display: table-column-group !important; }
+}
+
+@include lg-and-up {
+  .dn-lg              { display: none !important;               }
+  .di-lg              { display: inline !important;             }
+  .db-lg              { display: block !important;              }
+  .dib-lg             { display: inline-block !important;       }
+  .dit-lg             { display: inline-table !important;       }
+  .df-lg              { display: flex !important;               }
+  .dt-lg              { display: table !important;              }
+  .dtc-lg             { display: table-cell !important;         }
+  .dt-row-lg          { display: table-row !important;          }
+  .dt-row-group-lg    { display: table-row-group !important;    }
+  .dt-column-lg       { display: table-column !important;       }
+  .dt-column-group-lg { display: table-column-group !important; }
+}
+
+/* --------- */
+/*  Flexbox  */
+/* --------- */
+
+// Flex directions
+.flex-direction-column { flex-direction: column; }
+.flex-direction-row { flex-direction: row; }
+
+// Justify content (container)
+.jc-spacebetween { justify-content: space-between; }
+.jc-center       { justify-content: center;        }
+
+// Align items (container)
+.ai-center { align-items: center; }
+
+//Align
+.as-center { align-self: center; }
+.as-end { align-self: flex-end; }
+
+// Wrap items (container)
+.fw-wrap { flex-wrap: wrap; }
+
+//Flex Grow
+.fg-one { flex: 1; }
+

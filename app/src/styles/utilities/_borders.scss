@@ -1,0 +1,17 @@
+@import '~styles/mixins';
+
+.bb {
+  border-bottom: 0.0625rem solid $border-color;
+}
+
+.br {
+  border-right: 0.0625rem solid $border-color;
+}
+
+.bl {
+  border-left: 0.0625rem solid $border-color;
+}
+
+.ba {
+  @include box-shadow-border($border-color);
+}

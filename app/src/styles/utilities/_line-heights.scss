@@ -1,0 +1,41 @@
+.lhs  { line-height: 1 !important;    }
+.lhp  { line-height: 1.5 !important;  }
+.lh16 { line-height: $s16 !important; }
+.lh24 { line-height: $s24 !important; }
+.lh32 { line-height: $s32 !important; }
+.lh40 { line-height: $s40 !important; }
+.lh48 { line-height: $s48 !important; }
+.lh56 { line-height: $s56 !important; }
+
+@include sm-and-up {
+  .lhs-sm  { line-height: 1 !important;    }
+  .lhp-sm  { line-height: 1.5 !important;  }
+  .lh16-sm { line-height: $s16 !important; }
+  .lh24-sm { line-height: $s24 !important; }
+  .lh32-sm { line-height: $s32 !important; }
+  .lh40-sm { line-height: $s40 !important; }
+  .lh48-sm { line-height: $s48 !important; }
+  .lh56-sm { line-height: $s56 !important; }
+}
+
+@include md-and-up {
+  .lhs-md  { line-height: 1 !important;    }
+  .lhp-md  { line-height: 1.5 !important;  }
+  .lh16-md { line-height: $s16 !important; }
+  .lh24-md { line-height: $s24 !important; }
+  .lh32-md { line-height: $s32 !important; }
+  .lh40-md { line-height: $s40 !important; }
+  .lh48-md { line-height: $s48 !important; }
+  .lh56-md { line-height: $s56 !important; }
+}
+
+@include lg-and-up {
+  .lhs-lg  { line-height: 1 !important;    }
+  .lhp-lg  { line-height: 1.5 !important;  }
+  .lh16-lg { line-height: $s16 !important; }
+  .lh24-lg { line-height: $s24 !important; }
+  .lh32-lg { line-height: $s32 !important; }
+  .lh40-lg { line-height: $s40 !important; }
+  .lh48-lg { line-height: $s48 !important; }
+  .lh56-lg { line-height: $s56 !important; }
+}

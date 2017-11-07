@@ -1,0 +1,84 @@
+a.l-normal {
+  text-decoration: none;
+  color: $color-blue-primary;
+  transition: $transition-fast;
+
+  &:hover {
+    cursor: pointer;
+    color: $color-blue-600;
+    text-decoration: none;
+  }
+
+  &:focus, &:active {
+    text-decoration: none;
+  }
+}
+
+a.l-dimmed {
+  text-decoration: none;
+  color: $color-grey-primary;
+  transition: $transition-fast;
+
+  &:hover {
+    cursor: pointer;
+    color: $color-blue-primary;
+    text-decoration: none;
+  }
+
+  &:focus {
+    text-decoration: none;
+  }
+
+  &:active {
+    color: $color-blue-600;
+    text-decoration: none;
+  }
+}
+
+a.l-white {
+  text-decoration: none;
+  color: $color-white;
+  transition: $transition-fast;
+
+  &:hover {
+    cursor: pointer;
+    color: $color-white;
+    text-decoration: underline;
+  }
+
+  &:focus {
+    text-decoration: none;
+  }
+
+  &:active {
+    color: $color-blue-600;
+    text-decoration: none;
+  }
+}
+
+a.l-dark {
+  text-decoration: none;
+  color: $color-blue-700;
+  transition: $transition-fast;
+
+  &:hover {
+    cursor: pointer;
+    color: $color-blue-800;
+    text-decoration: none;
+  }
+
+  &:focus {
+    text-decoration: none;
+  }
+
+  &:active {
+    color: $color-blue-800;
+    text-decoration: none;
+  }
+}
+
+// This class is applied to <Link /> when it's wrapping the <Button /> component
+a.l-btn-link {
+  text-decoration: none;
+  color: inherit;
+}

@@ -1,0 +1,25 @@
+.fw1  { font-weight: $fw-book !important;   }
+.fw2  { font-weight: $fw-medium !important; }
+.fw3  { font-weight: $fw-heavy !important;  }
+.fw4  { font-weight: $fw-black !important;  }
+
+@include sm-and-up {
+  .fw1-sm { font-weight: $fw-book !important;   }
+  .fw2-sm { font-weight: $fw-medium !important; }
+  .fw3-sm { font-weight: $fw-heavy !important;  }
+  .fw4-sm { font-weight: $fw-black !important;  }
+}
+
+@include md-and-up {
+  .fw1-md { font-weight: $fw-book !important;   }
+  .fw2-md { font-weight: $fw-medium !important; }
+  .fw3-md { font-weight: $fw-heavy !important;  }
+  .fw4-md { font-weight: $fw-black !important;  }
+}
+
+@include lg-and-up {
+  .fw1-lg { font-weight: $fw-book !important;   }
+  .fw2-lg { font-weight: $fw-medium !important; }
+  .fw3-lg { font-weight: $fw-heavy !important;  }
+  .fw4-lg { font-weight: $fw-black !important;  }
+}

@@ -1,0 +1,37 @@
+.fs-xxs {  font-size: $fs-xxs; }
+.fs-xs  {  font-size: $fs-xs;  }
+.fs-s   {  font-size: $fs-s;   }
+.fs-m   {  font-size: $fs-m;   }
+.fs-l   {  font-size: $fs-l;   }
+.fs-xl  {  font-size: $fs-xl;  }
+.fs-xxl {  font-size: $fs-xxl; }
+
+@include sm-and-up {
+  .fs-xxs-sm {  font-size: $fs-xxs; }
+  .fs-xs-sm  {  font-size: $fs-xs;  }
+  .fs-s-sm   {  font-size: $fs-s;   }
+  .fs-m-sm   {  font-size: $fs-m;   }
+  .fs-l-sm   {  font-size: $fs-l;   }
+  .fs-xl-sm  {  font-size: $fs-xl;  }
+  .fs-xxl-sm {  font-size: $fs-xxl; }
+}
+
+@include md-and-up {
+  .fs-xxs-md {  font-size: $fs-xxs; }
+  .fs-xs-md  {  font-size: $fs-xs;  }
+  .fs-s-md   {  font-size: $fs-s;   }
+  .fs-m-md   {  font-size: $fs-m;   }
+  .fs-l-md   {  font-size: $fs-l;   }
+  .fs-xl-md  {  font-size: $fs-xl;  }
+  .fs-xxl-md {  font-size: $fs-xxl; }
+}
+
+@include lg-and-up {
+  .fs-xxs-lg {  font-size: $fs-xxs; }
+  .fs-xs-lg  {  font-size: $fs-xs;  }
+  .fs-s-lg   {  font-size: $fs-s;   }
+  .fs-m-lg   {  font-size: $fs-m;   }
+  .fs-l-lg   {  font-size: $fs-l;   }
+  .fs-xl-lg  {  font-size: $fs-xl;  }
+  .fs-xxl-lg {  font-size: $fs-xxl; }
+}

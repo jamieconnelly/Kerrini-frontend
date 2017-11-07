@@ -1,0 +1,15 @@
+.fill           { fill: $color-grey-primary;   }
+
+.fill {
+  &.white       { fill: $color-white;          }
+  &.green       { fill: $color-green-primary;  }
+  &.dark-green  { fill: $color-green-700;      }
+  &.red         { fill: $color-red-primary;    }
+  &.yellow      { fill: $color-yellow-primary; }
+  &.dark-yellow { fill: $color-yellow-700;     }
+  &.dark-red    { fill: $color-red-700;        }
+  &.grey        { fill: $color-grey-primary;   }
+  &.dark-grey   { fill: $color-grey-700;       }
+  &.blue        { fill: $color-blue-primary;   }
+  &.dark-blue   { fill: $color-blue-700;       }
+}

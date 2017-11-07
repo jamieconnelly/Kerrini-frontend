@@ -1,0 +1,21 @@
+.fl { float: left;  }
+.fr { float: right; }
+.fn { float: none;  }
+
+@include sm-and-up {
+  .fl-sm { float: left;  }
+  .fr-sm { float: right; }
+  .fn-sm { float: none;  }
+}
+
+@include md-and-up {
+  .fl-md { float: left;  }
+  .fr-md { float: right; }
+  .fn-md { float: none;  }
+}
+
+@include lg-and-up {
+  .fl-lg { float: left;  }
+  .fr-lg { float: right; }
+  .fn-lg { float: none;  }
+}

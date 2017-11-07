@@ -1,0 +1,156 @@
+@keyframes bounce {
+  0%, 25%, 75%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes slideUpFadeIn {
+  0% {
+  	opacity: 0;
+  	margin-top: 25%;
+  }
+
+  50% {
+ 		opacity: 0;
+ 	}
+
+  100% {
+ 		opacity: 1;
+ 		margin-top: 0;
+	}
+}
+
+.pg-animate-slideup-fadein {
+  animation: slideUpFadeIn .5s;
+}
+
+@keyframes slideDownFadeIn {
+	0% {
+		opacity: 0;
+  	margin-top: -25%;
+	}
+
+	50% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+ 		margin-top: 0;
+	}
+}
+
+.pg-animate-slidedown-fadein {
+  animation: slideDownFadeIn .5s;
+}
+
+// Note: We can't just do `max-height: 10000px` as that would mean
+//       the element would expand instantly.
+//       In the future we'll have a couple of the expandHeightClasses
+//       E.g. `.pg-animate-expand-height-200px-fadein`
+//            `.pg-animate-expand-height-400px-fadein`
+//            `.pg-animate-expand-height-600px-fadein`
+//            `.pg-animate-expand-height-800px-fadein`
+@keyframes expandHeight200pxFadeIn {
+	0% {
+		opacity: 0;
+		max-height: 0;
+	}
+
+	50% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+		max-height: 200px;
+	}
+}
+
+.pg-animate-expand-height-200px-fadein {
+  animation: expandHeight200pxFadeIn .5s;
+}
+
+.pg-animate-bounce {
+  animation: bounce 1s infinite
+}
+
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.fade-in {
+  @if not $is-screener {
+    opacity:0;
+
+    -webkit-animation:fadeIn ease-in 1;
+    -moz-animation:fadeIn ease-in 1;
+    animation:fadeIn ease-in 1;
+
+    -webkit-animation-fill-mode:forwards;
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+
+    -webkit-animation-duration:200ms;
+    -moz-animation-duration:200ms;
+    animation-duration:200ms;
+  }
+}
+
+@-webkit-keyframes fadeOut { from { opacity:1; } to { opacity:0; } }
+@-moz-keyframes fadeOut { from { opacity:1; } to { opacity:0; } }
+@keyframes fadeOut { from { opacity:1; } to { opacity:0; } }
+
+.fade-out {
+	opacity:0;
+	-webkit-animation:fadeOut ease-in 1;
+	-moz-animation:fadeOut ease-in 1;
+	animation:fadeOut ease-in 1;
+
+	-webkit-animation-fill-mode:backwards;
+	-moz-animation-fill-mode:backwards;
+	animation-fill-mode:backwards;
+
+	-webkit-animation-duration:300ms;
+	-moz-animation-duration:300ms;
+	animation-duration:300ms;
+}
+
+@-webkit-keyframes slideInFromLeft { from { transform: translateX(-100%); } to { transform: translateX(0); } }
+@-moz-keyframes slideInFromLeft { from { transform: translateX(-100%); } to { transform: translateX(0); } }
+@keyframes slideInFromLeft { from { transform: translateX(-100%); } to { transform: translateX(0); } }
+
+.slide-in {
+	-webkit-animation:slideInFromLeft ease-in 1;
+	-moz-animation:slideInFromLeft ease-in 1;
+	animation:slideInFromLeft ease-in 1;
+
+	-webkit-animation-fill-mode:forwards;
+	-moz-animation-fill-mode:forwards;
+	animation-fill-mode:forwards;
+
+	-webkit-animation-duration:300ms;
+	-moz-animation-duration:300ms;
+	animation-duration:300ms;
+}
+
+@-webkit-keyframes slideInFromRight { from { transform: translateX(100%); } to { transform: translateX(0); } }
+@-moz-keyframes slideInFromRight { from { transform: translateX(100%); } to { transform: translateX(0); } }
+@keyframes slideInFromRight { from { transform: translateX(100%); } to { transform: translateX(0); } }
+
+.slide-in-right {
+	-webkit-animation:slideInFromRight ease-in 1;
+	-moz-animation:slideInFromRight ease-in 1;
+	animation:slideInFromRight ease-in 1;
+
+	-webkit-animation-fill-mode:forwards;
+	-moz-animation-fill-mode:forwards;
+	animation-fill-mode:forwards;
+
+	-webkit-animation-duration:300ms;
+	-moz-animation-duration:300ms;
+	animation-duration:300ms;
+}

@@ -1,0 +1,21 @@
+.tl { text-align: left;   }
+.tr { text-align: right;  }
+.tc { text-align: center; }
+
+@include sm-and-up {
+  .tl-sm { text-align: left;   }
+  .tr-sm { text-align: right;  }
+  .tc-sm { text-align: center; }
+}
+
+@include md-and-up {
+  .tl-md { text-align: left;   }
+  .tr-md { text-align: right;  }
+  .tc-md { text-align: center; }
+}
+
+@include lg-and-up {
+  .tl-lg { text-align: left;   }
+  .tr-lg { text-align: right;  }
+  .tc-lg { text-align: center; }
+}

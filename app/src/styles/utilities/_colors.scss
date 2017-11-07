@@ -1,0 +1,18 @@
+.color          { color: $color-text-dark;      }
+
+.color {
+  &.white       { color: $color-white;          }
+  &.light-grey  { color: $color-grey-300;       }
+  &.dark-grey   { color: $color-grey-700;       }
+  &.grey        { color: $color-grey-primary;   }
+  &.dark-grey   { color: $color-grey-700;       }
+  &.green       { color: $color-green-primary;  }
+  &.dark-green  { color: $color-green-700;      }
+  &.yellow      { color: $color-yellow-primary; }
+  &.dark-yellow { color: $color-yellow-700;     }
+  &.red         { color: $color-red-primary;    }
+  &.dark-red    { color: $color-red-700;        }
+  &.blue        { color: $color-blue-primary;   }
+  &.dark-blue   { color: $color-blue-800;       }
+  &.text        { color: $color-text-dark;      }
+}
