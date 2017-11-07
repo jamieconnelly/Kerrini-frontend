@@ -1,14 +1,20 @@
 version: '2'
 
 services:
-  app:
+  web:
     build: ./app
+    ports:
+    - 8080:8080
     volumes:
-      - ./app/dist:/usr/local/nginx/html
+    - ./app:/usr/src/app/:rw
+    environment:
+    - NODE_ENV=dev
 
   nginx:
     build: ./nginx
-    volumes_from:
-      - app
     ports:
       - "80:80"
+    links:
+      - web
+    depends_on:
+      - web

@@ -3,11 +3,6 @@ FROM mhart/alpine-node:7
 WORKDIR /usr/src/app
 COPY . /usr/src/app
 
-RUN npm install webpack -g
-RUN npm config set registry http://registry.npmjs.org/ && npm install
-RUN webpack
+RUN npm install webpack-dev-server -g && npm install
 
-RUN mkdir -p /usr/local/nginx/html && cp -r /usr/src/app/dist /usr/local/nginx/html
-VOLUME /usr/local/nginx/html
-
-CMD ["true"]
+CMD [ "npm", "run", "webpack-dev-server" ]

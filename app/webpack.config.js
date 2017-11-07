@@ -1,6 +1,7 @@
 const path = require('path')
 
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const webpack = require('webpack')
 
 const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
   template: './dist/index.html',
@@ -11,7 +12,7 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
 module.exports = {
   entry: path.resolve(__dirname, 'src/index.jsx'),
   output: {
-    path: path.resolve('dist'),
+    path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
     publicPath: '/',
   },
@@ -36,8 +37,14 @@ module.exports = {
     }],
   },
   // plugins: [HtmlWebpackPluginConfig],
+  plugins: [new webpack.HotModuleReplacementPlugin()],
   devServer: {
+    hot: true,
+    port: 8080,
+    publicPath: '/',
+    contentBase: path.resolve(__dirname, 'dist'),
     historyApiFallback: true,
+    disableHostCheck: true,   // That solved it
   },
   resolve: {
     extensions: ['.js', '.jsx'],
