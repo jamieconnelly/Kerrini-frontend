@@ -126,6 +126,8 @@ const getConfig = (env, options) => {
       path: path.resolve(__dirname, 'dist'),
       filename: 'bundle.js',
       publicPath: '/',
+      hotUpdateChunkFilename: 'hot/hot-update.js',
+      hotUpdateMainFilename: 'hot/hot-update.json',
     },
     module: {
       rules: getRules(env, options),

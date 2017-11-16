@@ -56,7 +56,6 @@
     "redux": "^3.7.2",
     "redux-thunk": "^2.2.0",
     "rimraf": "^2.6.2",
-    "sass-brunch": "^2.10.4",
     "sass-loader": "^6.0.5",
     "style-loader": "^0.18.1",
     "svg-url-loader": "^2.2.0",
