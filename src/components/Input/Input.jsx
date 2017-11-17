@@ -4,6 +4,7 @@ import classNames from 'classnames'
 
 export const Input = ({
   className,
+  input,
   Disabled,
   Large,
   Medium,
@@ -19,12 +20,13 @@ export const Input = ({
   })
   return (
     <div>
-      {label && <label className="ttu fw3 fs-xs" htmlFor={name}>{label}</label>}
+      {label && <label className="ttu fw2 fs-xs" htmlFor={name}>{label}</label>}
       <input
         styleName={sizes}
         className={className}
         disabled={Disabled}
         type={type}
+        {...input}
       />
     </div>
   )

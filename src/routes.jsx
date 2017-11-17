@@ -3,7 +3,7 @@ import { Switch, Route } from 'react-router'
 import { ConnectedRouter } from 'react-router-redux'
 import { Provider } from 'react-redux'
 
-import { SignUp } from './pages/SignUp/SignUp'
+import SignUp from './pages/SignUp/SignUp'
 
 class Home extends React.Component {
   constructor(props) {
