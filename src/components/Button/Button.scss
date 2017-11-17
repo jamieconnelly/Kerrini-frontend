@@ -1,0 +1,207 @@
+@import "~styles/variables";
+@import "~styles/mixins";
+
+/* ------------- */
+/* Button mixins */
+/* ------------- */
+
+// Button style: Regular
+@mixin regular-button($color) {
+  color: $color-white;
+  background-color: $color;
+
+  &:hover {
+    background-color: darken($color, 4%);
+  }
+
+  &:active {
+    background-color: $color;
+  }
+}
+
+// Button style: Outline
+@mixin outline-button($color) {
+  background-color: $color-white;
+  color: $color;
+  box-shadow: inset 1px 0 0 0  $color,
+              inset -1px 0 0 0 $color,
+              inset 0 -1px 0 0 $color,
+              inset 0 1px 0 0  $color;
+
+  &:hover {
+    background-color: $color-white;
+    box-shadow: inset 1px 0 0 0  $color,
+                inset -1px 0 0 0 $color,
+                inset 0 -1px 0 0 $color,
+                inset 0 1px 0 0  $color,
+                $bs-weak;
+  }
+
+  &:active {
+    background-color: $color-white;
+    box-shadow: inset 1px 0 0 0  $color,
+                inset -1px 0 0 0 $color,
+                inset 0 -1px 0 0 $color,
+                inset 0 1px 0 0  $color,
+                $bs-weak;
+  }
+}
+
+/* -------------- */
+/* Button classes */
+/* -------------- */
+
+.btn {
+  text-decoration: none;
+  position: relative;
+  vertical-align: top;
+  text-align: center;
+  display: inline-block;
+  background-color: $color-blue-700;
+  border: 0;
+  font-size: $fs-xs;
+  line-height: $s16;
+  padding: $s8 $s16;
+  border-radius: $br-sm;
+  color: $color-white;
+  font-weight: $fw-heavy;
+  text-transform: uppercase;
+  outline: 0;
+  transition: $transition-fast;
+  white-space: nowrap;
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: $bs-weak;
+    background-color: darken($color-blue-primary, 4%);
+  }
+
+  &:active {
+    transform: translateY(1px);
+    box-shadow: $bs-weak;
+    background-color: $color-blue-primary;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+// Note: Needed if button classes are applied to <a>'s
+a.btn {
+  color: $color-white;
+
+  &:hover, &:focus {
+    text-decoration: none;
+  }
+}
+
+// Button sizes
+.btn.small {
+  text-transform: capitalize;
+  font-size: $fs-xxs;
+  line-height: $s16;
+  padding: $s4 $s8;
+}
+
+.btn.large {
+  font-size: $fs-s;
+  line-height: $s24;
+  padding: $s8 $s16;
+}
+
+// Button variations
+.btn.outline {
+  @include outline-button($color-blue-primary);
+
+  &.disabled {
+    box-shadow: none;
+  }
+}
+
+// Button modifiers
+.btn.btn-block {
+  display: block;
+  width: 100%;
+}
+
+.btn.btn-block-only-sm {
+  display: block;
+  width: 100%;
+
+  @include sm-and-up {
+    display: inline-block;
+    width: auto;
+  }
+}
+
+.btn.btn-block-only-md {
+  display: block;
+  width: 100%;
+
+  @include md-and-up {
+    display: inline-block;
+    width: auto;
+  }
+}
+
+.btn.loading {
+  // See: https://developer.mozilla.org/en-US/docs/Web/CSS/cursor?v=example#Values
+  // cursor: default;
+  cursor: progress;
+  // cursor: wait;
+}
+
+.btn-loading-dots {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
+}
+
+// Color variations
+.btn.green     { @include regular-button($color-green-primary);  }
+.btn.red       { @include regular-button($color-red-primary);    }
+.btn.yellow    { @include regular-button($color-yellow-primary); }
+.btn.dark-blue { @include regular-button($color-blue-800);       }
+.btn.grey      { @include regular-button($color-grey-primary);   }
+.btn.grey {
+  background-color: $color-grey-10;
+  color: $color-grey-primary;
+
+    &:hover {
+      color: $color-blue-primary;
+      box-shadow: none;
+      background-color: $color-grey-10;
+      }
+    }
+.btn.white {
+  @include regular-button($color-white);
+  color: $color-grey-primary;
+  &:hover {
+    background-color: $color-white;
+    @include box-shadow-border($border-color);
+  }
+}
+
+.btn.outline.green  { @include outline-button($color-green-primary);  }
+.btn.outline.red    { @include outline-button($color-red-primary);    }
+.btn.outline.yellow { @include outline-button($color-yellow-primary); }
+.btn.outline.grey   { @include outline-button($color-grey-primary);   }
+
+.btn.disabled {
+  cursor: not-allowed;
+  background-color: $color-grey-100;
+  color: $color-grey-primary;
+
+  &:hover {
+    background-color: $color-grey-100;
+    color: $color-grey-primary;
+    box-shadow: none;
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}

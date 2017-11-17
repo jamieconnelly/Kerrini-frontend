@@ -1,0 +1,65 @@
+@import "~styles/variables";
+@import "~styles/mixins";
+
+.input {
+  transition: $transition-fast;
+  border-radius: $br-sm;
+  width: 100%;
+  padding: $s8;
+  line-height: $s16;
+  border: none;
+  height: $s32;
+  font-size: $fs-s;
+  color: $color-text-dark;
+  @include box-shadow-border($border-color);
+
+  &:hover {
+    @include box-shadow-border($color-grey-300);
+  }
+
+  &:focus {
+    outline: 0;
+    @include box-shadow-border($color-blue-primary);
+  }
+
+  &::placeholder {
+    color: $border-color;
+    font-size: $fs-s;
+  }
+
+  &.medium {
+    height: $s40;
+  }
+
+  &.large {
+    height: $s48;
+  }
+
+  &:disabled {
+    background-color: $color-grey-100;
+    color: $color-grey-primary;
+
+    &:hover {
+      @include box-shadow-border($border-color);
+      cursor: not-allowed;
+    }
+  }
+
+  &.blue {
+    background-color: $color-blue-400;
+    @include box-shadow-border($color-blue-600);
+    color: $color-white;
+
+    &:hover {
+      @include box-shadow-border($color-blue-700);
+    }
+
+    &:focus {
+      @include box-shadow-border($color-blue-800);
+    }
+
+    &::placeholder {
+      color: $color-blue-200;
+    }
+  }
+}

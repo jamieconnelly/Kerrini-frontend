@@ -3,6 +3,8 @@ import { Switch, Route } from 'react-router'
 import { ConnectedRouter } from 'react-router-redux'
 import { Provider } from 'react-redux'
 
+import { SignUp } from './pages/SignUp/SignUp'
+
 class Home extends React.Component {
   constructor(props) {
     super(props)
@@ -30,12 +32,6 @@ class Home extends React.Component {
     return (<div>{this.state.data ? this.state.data : 'Hello'}</div>)
   }
 }
-
-const SignUp = () => (
-  <div>
-    <input type="text" placeholder="name"/>
-  </div>
-)
 
 export const AppRouter = ({ store, history }) => (
   <Provider store={store}>
