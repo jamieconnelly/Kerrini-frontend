@@ -57,7 +57,7 @@
   vertical-align: top;
   text-align: center;
   display: inline-block;
-  background-color: $color-blue-700;
+  background-color: $color-blue-primary;
   border: 0;
   font-size: $fs-xs;
   line-height: $s16;
@@ -73,7 +73,7 @@
   &:hover {
     cursor: pointer;
     box-shadow: $bs-weak;
-    background-color: darken($color-blue-primary, 4%);
+    background-color: darken($color-blue-primary, 5%);
   }
 
   &:active {

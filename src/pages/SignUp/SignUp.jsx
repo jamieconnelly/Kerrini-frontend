@@ -1,28 +1,43 @@
 import React from 'react'
+import { connect } from 'react-redux'
 import { Field, reduxForm } from 'redux-form'
 
+import UserActionCreators from 'actions/user.actionCreators'
 import { Button, Input } from 'components'
 
+import { inputsMap } from './constants'
 
-export const SignUp = () => {
-  const handleSubmit = (values) => console.log(values)
-  return (
-    <div className="w66 center-element pa8">
-      <div className="center-element w50 ba br-sm bg-white pa8">
-        <h1 className="tc mb4 color">Sign up</h1>
-        <form onSubmit={handleSubmit}>
-          <Field component={Input} name="name" Medium type="text" className="mb4" label="full name"/>
-          <Field component={Input} name="email" Medium type="text" className="mb4" label="email"/>
-          <Field component={Input} name="password" Medium type="password" className="mb4" label="password"/>
-          <Field component={Input} name="reEnteredPassword" Medium type="password" className="mb4" label="re-enter password"/>
-          <Button type="submit" Block Large className="mt2">Sign up</Button>
-        </form>
-      </div>
-    </div>
-  )
-}
+const SignUp = ({ handleSubmit, submitting, invalid }) => (
+  <div className="center-element w33 ba br-sm bg-white pa8 mt10">
+    <h2 className="tc mb4 color">Create an account</h2>
+    <form onSubmit={handleSubmit}>
+      {Object.keys(inputsMap)
+        .map((key, idx) => (
+          <Field
+            key={idx}
+            component={Input}
+            name={key}
+            Medium
+            type={inputsMap[key].type}
+            className="mb4"
+            label={inputsMap[key].label}
+            validate={inputsMap[key].validate}
+          />
+      ))}
+      <Button type="submit" Block Large className="mt2" Disabled={submitting || invalid}>Sign up</Button>
+    </form>
+  </div>
+)
 
-export default reduxForm({
-  form: 'signUp'
+const SignUpForm = reduxForm({
+  form: 'signUp',
 })(SignUp)
 
+export default connect(
+  null,
+  (dispatch) => ({
+    onSubmit: (values) => {
+      return dispatch(UserActionCreators.signUp(values))
+    }
+  })
+)(SignUpForm)

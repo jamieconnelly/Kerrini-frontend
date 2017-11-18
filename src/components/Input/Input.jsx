@@ -4,14 +4,18 @@ import classNames from 'classnames'
 
 export const Input = ({
   className,
-  input,
   Disabled,
+  input,
+  label,
   Large,
   Medium,
+  meta: {
+    error,
+    touched,
+  },
   name,
   text,
   type,
-  label,
 }) => {
   const sizes = classNames(
     'input', {
@@ -28,6 +32,7 @@ export const Input = ({
         type={type}
         {...input}
       />
+      {touched && error && <span className="color red fs-xs">{`* ${error}`}</span>}
     </div>
   )
 }
