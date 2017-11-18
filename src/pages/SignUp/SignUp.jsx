@@ -1,15 +1,15 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { Field, reduxForm } from 'redux-form'
+import { Field, reduxForm, SubmissionError } from 'redux-form'
 
 import UserActionCreators from 'actions/user.actionCreators'
 import { Button, Input } from 'components'
 
 import { inputsMap } from './constants'
 
-const SignUp = ({ handleSubmit, submitting, invalid }) => (
+const SignUp = ({ error, handleSubmit, submitting, invalid }) => (
   <div className="center-element w33 ba br-sm bg-white pa8 mt10">
-    <h2 className="tc mb4 color">Create an account</h2>
+    <h2 className="tc mb4">create an account</h2>
     <form onSubmit={handleSubmit}>
       {Object.keys(inputsMap)
         .map((key, idx) => (
@@ -24,6 +24,7 @@ const SignUp = ({ handleSubmit, submitting, invalid }) => (
             validate={inputsMap[key].validate}
           />
       ))}
+      {error && <span className="color red fs-xs">{error}</span>}
       <Button type="submit" Block Large className="mt2" Disabled={submitting || invalid}>Sign up</Button>
     </form>
   </div>
@@ -36,8 +37,11 @@ const SignUpForm = reduxForm({
 export default connect(
   null,
   (dispatch) => ({
-    onSubmit: (values) => {
-      return dispatch(UserActionCreators.signUp(values))
+    onSubmit: ({ name, email, password }) => {
+      return dispatch(UserActionCreators.signUp({ name, email, password }))
+        .catch(({ message }) => {
+          throw new SubmissionError({ _error: message })
+        })
     }
   })
 )(SignUpForm)
