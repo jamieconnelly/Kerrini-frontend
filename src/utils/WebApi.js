@@ -18,7 +18,7 @@ const postJSON = (url, data) => {
 }
 
 const signUp = (values) => (
-  postJSON('/auth/register', values)
+  postJSON('/auth/signup', values)
 )
 
 export default {
